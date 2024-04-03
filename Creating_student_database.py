@@ -22,5 +22,10 @@ class Student:
 anna = Student('Anna', 15, 9)
 
 anna.get_info() # anna introduce her self for first time
+# This will print: My name is Anna. I am 15 years old and in grade 9
+
 anna.promote() # anna got promoted to the grade 10
+# This will print: Anna has been promoted to grade 10.
+
 anna.get_info() # anna introduce her self second time but with higher grade
+# This will print: My name is Anna. I am 15 years old and in grade 10
