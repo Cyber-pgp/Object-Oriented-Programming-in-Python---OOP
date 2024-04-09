@@ -77,15 +77,19 @@ visitor_names = [
     "Jack"
 ]
 
-# create a function
+# create a randomness function to introduce unpredictability into our simulation
 def get_random_name(name_list):
   return random.choice(name_list)
 
-# here We'll adjust our Animal class to account for the new dynamics, including energy changes due to hunting and playing.
+
+# creating animal classes that includes attributes like:
+# name
+# energy level
+# behaviors such as eating, sleeping, making sounds, playing, and hunting.
 
 class Animal:
     def __init__(self, name):
-        self.name = get_random_name(animals_name)
+        self.name = get_random_name(animal_names)
         self.energy = 10 # our starting energy would be 10 because they had a goodnight sleep
 
 
@@ -106,15 +110,15 @@ class Animal:
 
 # animals r getting -5 energy when they play
 def play(self):
-  self.energy = -= 5
+  self.energy -= 5
   print(f'{self.name} played and lost some energy')
 
-# animals are hunting aenergy level changes when they r hunting or get hunted
+# animals are hunting and energy level changes when they r hunting or get hunted
 def hunt(self, prey):
-  if prey.energy > 0
+  if prey.energy > 0:
       self.energy += 5
       prey.energy = 0
-      print{f'{self.sname} hunted {prey.name} and gained energy.')
+      print(f'{self.name} hunted {prey.name} and gained energy.')
   else:
       print(f'{prey.name} is already out of energy.')
           
